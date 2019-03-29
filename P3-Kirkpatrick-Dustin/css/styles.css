@@ -1,0 +1,444 @@
+/* natural box model */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* Browser Upgrade Prompt */
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* hides an element, but not from screen readers */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* no break */
+.nobr {
+    white-space: nowrap;
+}
+
+/*
+    FONTS
+
+  This is the publicly available LCARS Font that most places use.  It's available here: http://www.lcarscom.net/LCARS%20Fonts.zip
+*/
+
+@font-face {
+    font-family: 'swiss911_xcm_btregular';
+    src: url('../fonts/tt0105m_-webfont.woff2') format('woff2'),
+         url('../fonts/tt0105m_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/*
+    COLORS
+    purple: #9977aa
+    red: #dd6644
+    yellow mustard: #ff9933
+    yellow light: #ffcc66
+
+ */
+
+/*
+    STRUCTURE
+*/
+
+body {
+  background-color: #000000;
+}
+
+/*
+    HEADER
+*/
+
+header {
+  width: 100%;
+  height: 180px;
+  border-bottom: 40px #dd6644 solid;
+  border-left: 10px #dd6644 solid;
+  border-bottom-left-radius: 20px;
+  background-color: #dd6644;
+}
+
+/*
+    NAVIGATION
+*/
+
+nav {
+  position: absolute;
+  background-color: #000000;
+  top: 0;
+  right: 0;
+  height: 140px;
+  width: 80px;
+}
+
+.menu {
+  display: flex;
+  flex-flow: column wrap;
+  align-content: flex-start;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.menu li {
+  list-style-type: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2px 0;
+}
+
+.menu a:hover {
+  background-color: #9977aa;
+  border: 3px #9977aa solid;
+}
+
+.menu a {
+  display: block;
+  padding-left: 0;
+  background-color: #774466;
+  border: 3px #774466 solid;
+  border-radius: 5px;
+  font-family: 'swiss911_xcm_btregular', sans-serif;
+}
+
+/*
+    MAIN
+*/
+
+main {
+  position: relative;
+  margin: 4px 0 0;
+  border-top: 1px #ffcc66 solid;
+  border-left: 10px #ffcc66 solid;
+  background-color: #ffcc66;
+  border-top-left-radius: 20px;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1440px;
+}
+
+/*
+    ASIDE
+*/
+
+.basic-info {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding-top: 3px;
+  padding-left: 20px;
+  height: 100%;
+  background-color: #000000;
+  width: 90%;
+  border-bottom-left-radius: 40px;
+  margin: 0;
+  text-align: center;
+}
+
+.basic-info h1, h2 {
+  padding: 0;
+  margin: 0;
+}
+
+aside {
+  height: 100%;
+  float: right;
+  margin: 40px 10px 0 10px;
+}
+
+.infobox {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin-top: 10px;
+}
+
+/*
+    FOOTER
+*/
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 90px;
+  margin-top: 10px;
+}
+
+footer a {
+  padding-right: 5px;
+}
+
+
+
+/*
+    TYPOGRAPHY
+    The LCARS was a little too hard to read with some kerning problems, so I added some letter spacing.  Unfortunately, my laptop decided to break so I was only able to test various screen sizes using Chrome's inspect tool from my desktop.  If it looks too congested on a laptop, that would be some good feedback.
+*/
+
+h1, h2, p, form {
+  font-family: 'swiss911_xcm_btregular', sans-serif;
+  color: #d6a444;
+  letter-spacing: 1px;
+}
+
+td {
+  font-family: 'swiss911_xcm_btregular', sans-serif;
+  color: #cc99cc;
+  letter-spacing: 1px;
+}
+
+/*
+    IMAGES
+*/
+img {
+    width: 100%;
+    display: block;
+}
+
+/* clearfix - in case you decide to float elements */
+.group::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+    LINKS
+*/
+
+a {
+  text-decoration: none;
+  color: #cc6699;
+}
+
+a:hover {
+  color: #ccddff;
+}
+
+a:visited {
+  background-color: #cc6699;
+  color: #774466;
+  border: 3px #cc6699 solid;
+}
+
+.menu .active {
+  background-color: #9999ff;
+  border: 3px #9999ff solid;
+}
+
+/*
+    ABOUT/HOME
+*/
+
+article {
+  background-color: #000000;
+  border-top-left-radius: 40px;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+section {
+  margin-left: 20px;
+}
+
+/*
+    CONTACT
+*/
+
+form {
+  display: flex;
+  flex-flow: column;
+  max-width: 300px;
+  margin: auto;
+  background-color: #664466;
+  border: 4px #664466 solid;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 10px;
+}
+
+form input, select, textarea {
+  margin: 4px;
+  background-color: #ccddff;
+  border: 0;
+  border-radius: 5px;
+}
+
+form .buttons {
+  max-width: 100px;
+  align-self: center;
+  background-color: #9999ff;
+  border: 0;
+  border-radius: 5px;
+}
+
+
+
+/* MEDIA QUERIES */
+/* X-Small devices (portait phones, less than 576px) */
+/* All styles up to this point in the stylesheet are for X-Small */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    /* body { background-color: orange; } */
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    /* body { background-color: green; } */
+
+/* HEADER */
+
+    header {
+      width: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: stretch;
+      border-bottom: 20px #dd6644 solid;
+      border-left: 90px #dd6644 solid;
+      border-bottom-left-radius: 60px;
+      background-color: #dd6644;
+    }
+
+/* ASIDE */
+
+    .basic-info {
+      min-width: 100%;
+      background-color: #000000;
+      border-bottom-left-radius: 40px;
+      margin: 0;
+      text-align: center;
+    }
+
+    aside {
+      width: 300px;
+    }
+
+    aside img, table{
+      width: 300px;
+    }
+
+    /* NAV */
+
+    nav {
+      position: absolute;
+      top: 180px;
+      left: 0;
+      width: 90px;
+      margin-top: 4px;
+      border-top: 20px #ffcc66 solid;
+      border-top-left-radius: 60px;
+      background-color: #ffcc66;
+      height: 100%;
+    }
+
+    ul.menu {
+      height: 100%;
+      padding: 18px 0 0;
+    }
+
+    .menu li {
+      list-style-type: none;
+      text-transform: uppercase;
+      width: 90px;
+      padding: 0;
+    }
+
+    .menu a {
+      display: block;
+      padding: 40px 0;
+      background-color: #774466;
+      border-top: 3px #000000 solid;
+      border-radius: 0;
+      font-family: 'swiss911_xcm_btregular', sans-serif;
+      color: #000000;
+      text-align: right;
+      }
+
+      a:visited {
+        background-color: #cc6699;
+      }
+
+      .menu .active {
+        background-color: #9999ff;
+        border-top: 3px #000000 solid;
+      }
+
+      /* TYPOGRAPHY */
+
+    li {
+      font-size: 20px;
+    }
+
+    h1 {
+      letter-spacing: 2px;
+      font-size: 48px;
+    }
+
+    h2 {
+      letter-spacing: 2px;
+      font-size: 30px;
+    }
+
+    p {
+      letter-spacing: 1px;
+      font-size: 24px;
+    }
+
+    td {
+      font-size: 20px;
+    }
+    label {
+      padding: 8px;
+    }
+
+    /* ABOUT/HOME */
+
+    main {
+      position: relative;
+      margin: 4px 0 0 90px;
+      border-top: 1px #ffcc66 solid;
+      background-color: #ffcc66;
+      border-left: 0;
+      border-radius: 0;
+    }
+
+    article {
+      background-color: #000000;
+      border-top-left-radius: 40px;
+      margin-top: 20px;
+      padding-top: 15px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    /* body { background-color: blue; } */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    /* body { background-color: purple; } */
+}

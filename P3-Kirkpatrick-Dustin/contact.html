@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+	<!--
+		I360 Web Design
+		Basic HTML/CSS template
+	-->
+
+	<head>
+		<meta charset="utf-8">
+		<title>Dustin Kirkpatrick</title>
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+		<!--[if lte IE 9]>
+			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<header>
+			<div class="basic-info">
+				<h1>Dustin Kirkpatrick</h1>
+				<h2><a href="mailto:d.l.kirkpat@gmail.com">d.l.kirkpat@gmail.com</a></h2>
+				<h2>704-578-6509</h2>
+			</div>
+		</header>
+
+		<!-- Navigation -->
+		<nav>
+				<ul class="menu">
+					<li><a href="index.html">About</a></li>
+					<li><a href="#">Portfolio</a></li>
+					<li><a href="#">Resume</a></li>
+					<li><a href="contact.html" class="active">Contact</a></li>
+				</ul>
+		</nav>
+
+		<!-- About Article -->
+		<main>
+			<article>
+				<section>
+					<p>
+						If you would like to reach out to me for employment opportunities or any other reason, feel free to use this contact form.
+					</p>
+						<form>
+							<label>First name:</label>
+							<input type="text" name="firstname" required><br>
+							<label>Last name:</label>
+							<input type="text" name="lastname" required><br>
+							<label>Reason for contact:</label>
+							<select name="reason" required>
+								<option value="" selected disabled hidden>Select Reason</option>
+								<option value="job">Job Opportunity</option>
+								<option value="social">Social Call</option>
+								<option value="spam">Spam</option>
+							</select><br>
+							<label>Comments:</label>
+							<textarea name="comments" rows="3" placeholder="More information"></textarea><br>
+							<input type="submit" name="submit" class="buttons">
+						</form>
+				</section>
+			</article>
+
+		</main>
+
+
+		<footer>
+			<a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+			<a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+			<a href="#"><i class="fas fa-envelope-square fa-2x"></i></a>
+		</footer>
+
+
+
+	</body>
+</html>
